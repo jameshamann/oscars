@@ -1,14 +1,35 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-
-var Select = require('react-select');
+import oscar from '../Oscar-Movie-Winners.json';
 
 class App extends Component {
 
 
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    console.log(oscar[2]);
+    alert('The Oscar Winner for: ' + this.state.value + ' was: ' + oscar[this.state.value - 1928].value);
+    event.preventDefault();
+  }
+
+ reqListener(e) {
+
+  }
+
   render() {
+    var date = new Date();
     return (
       <div className="App">
         <div className="App-header">
@@ -18,13 +39,13 @@ class App extends Component {
         <p className="App-intro">
           Choose a year and hit submit to see what won best picture!
         </p>
-        <Select
-          name="form-field-name"
-          options={options}
-          onChange={logChange}
-        />
-      <select id="year" name="year"></select>
-      <input type="submit" value="Submit!"/>
+        <form onSubmit={this.handleSubmit}>
+       <label>
+         Year:
+         <input type="year" value={this.state.value} onChange={this.handleChange} />
+       </label>
+       <input type="submit" value="Submit" />
+     </form>
       </div>
     );
   }

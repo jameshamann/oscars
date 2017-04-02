@@ -1,20 +1,10 @@
 
 [
   {
-    "year": "1928",
-    "value": "Wings",
-    "tokens": [
-      "Wings"
-    ]
+    "year": "1928", "value": "Wings"
   },
   {
-    "year": "1929",
-    "value": "The Broadway Melody",
-    "tokens": [
-      "The",
-      "Broadway",
-      "Melody"
-    ]
+    "year": "1929", "value": "The Broadway Melody"
   },
   {
     "year": "1930",
@@ -285,7 +275,7 @@
     "value": "Gigi",
     "tokens": [
       "Gigi"
-      
+
     ]
   },
   {
@@ -294,7 +284,7 @@
     "tokens": [
       "Ben",
       "Hur"
-      
+
     ]
   },
   {
@@ -303,7 +293,7 @@
     "tokens": [
       "The",
       "Apartment"
-      
+
     ]
   },
   {
@@ -786,5 +776,5 @@
     "tokens": [
       "Moonlight"
     ]
-  },
+  }
 ]
