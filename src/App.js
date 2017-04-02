@@ -20,7 +20,7 @@ class App extends Component {
 
   handleSubmit(event) {
     console.log(oscar[2]);
-    alert('The Oscar Winner for: ' + this.state.value + ' was: ' + oscar[this.state.value - 1928].value);
+    alert('The Oscar Winner for Best Picture in: ' + this.state.value + ' was: ' + oscar[this.state.value - 1928].value);
     event.preventDefault();
   }
 
@@ -37,7 +37,7 @@ class App extends Component {
           <h2>What won Best Picture the year you were born?</h2>
         </div>
         <p className="App-intro">
-          Choose a year and hit submit to see what won best picture!
+          Type in a year between 1929 and 2016, hit submit and see what won best picture!
         </p>
         <form onSubmit={this.handleSubmit}>
        <label>
